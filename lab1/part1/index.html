@@ -5,58 +5,57 @@ Date: Jan 17th, 2025
 Description: A webpage that contains formatted text for a letter-spacing
 -->
 
-<html>
+<!doctype html>
+<html lang="en">
 	<head>
 		<title>
-		Lab 1 - Part 1
+			Lab 1 - Part 1
 		</title>
+		<style>
+			body {
+			  max-width: 800px;
+			  margin: 0 auto;
+			}
+
+			.sender-column {
+			  text-align: right;
+			}
+
+			h1 {
+			  font-size: 1.5em;
+			}
+
+			h2 {
+			  font-size: 1.3em;
+			}
+
+			p,ul,ol,dl,address {
+			  font-size: 1.1em;
+			}
+
+			p, li, dd, dt, address {
+			  line-height: 1.5;
+			}
+		</style>
 	</head>
 <body>
-<style>
-body {
-  max-width: 800px;
-  margin: 0 auto;
-}
 
-.sender-column {
-  text-align: right;
-}
-
-h1 {
-  font-size: 1.5em;
-}
-
-h2 {
-  font-size: 1.3em;
-}
-
-p,ul,ol,dl,address {
-  font-size: 1.1em;
-}
-
-p, li, dd, dt, address {
-  line-height: 1.5;
-}
-</style>
-
-<p>
-	<div class="sender-column">
+<div class="sender-column">
+	<address>
 		<i>
-			<address>
-			<b>Dr. Eleanor Gaye</b>
-			<br>Awesome Science faculty
-			<br>University of Awesome
-			<br>Bobtown, CA 99999,
-			<br>USA
-			<br><b>Tel:</b> 123-456-7890
-			<br><b>Email:</b> no_reply@example.com
-			</address>
+		<b>Dr. Eleanor Gaye</b>
+		<br>Awesome Science faculty
+		<br>University of Awesome
+		<br>Bobtown, CA 99999,
+		<br>USA
+		<br><b>Tel:</b> 123-456-7890
+		<br><b>Email:</b> no_reply@example.com
 		</i>
-	<p>
+	</address>
+<p>
 	20 January 2016
-	</p>
-	</div>
 </p>
+</div>
 
 <p>
 	<i>
@@ -66,7 +65,6 @@ p, li, dd, dt, address {
 	<br>UK
 	</i>
 </p>
-
 
 Re: Eileen Dover university application
 
@@ -115,6 +113,5 @@ Yours sincerely,
 Dr Eleanor Gaye
 
 University of Awesome motto: "Be awesome to each other." -- The memoirs of Bill S Preston, Esq
-</p>
 </body>
 </html>
