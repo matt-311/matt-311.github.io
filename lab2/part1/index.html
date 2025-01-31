@@ -1,7 +1,7 @@
 <!--
 Name: Matthew Pearce
 Filename: index.html
-Date: Jan 28th, 2025
+Date: Jan 31, 2025
 Description: A webpage that contains images and an embeded video
 -->
 
@@ -106,7 +106,7 @@ Description: A webpage that contains images and an embeded video
   <body>
     <header>
       <h1>Mozilla</h1>
-      <img src="images/firefox_logo-only_RGB.png" alt="The Firefox logog">
+      <img src="images/firefox_logo_120px.png" alt="The Firefox logo">
 
     </header>
 
@@ -123,13 +123,13 @@ Description: A webpage that contains images and an embeded video
 
       <div class="further-info">
         <a href="https://www.mozilla.org/en-US/firefox/new/">
-          <img src="images/firefox_logo-only_RGB.png" alt="The Firefox logo">
+          <img srcset="images/firefox_logo_120px.png 120w, images/firefox_logo_400px.png 400w" sizes="(max-width: 600px) 120px, 400px" src="images/firefox_logo_400px.png" alt="The Firefox logo">
         </a>
         <a href="https://www.mozilla.org/">
-          <img src="images/mozilla-dinosaur-head.png" alt="An image of the red Mozilla dinosaur head">
+          <img srcset="images/mozilla_dinosaur_head_120px.png 120w, images/mozilla_dinosaur_head_400px.png 400w" sizes="(max-width: 600px) 120px, 400px" src="images/mozilla_dinosaur_head_400px.png" alt="The Mozilla dinosaur logo">
         </a>
         <a href="https://addons.mozilla.org/">
-          <img src="images/firefox-addons.jpg" alt="An image of the Firefox logo that is created with puzzle pieces">
+          <img srcset="images/firefox_addons_120px.png 120w, images/firefox_addons_400px.jpg 400w" sizes="(max-width: 600px) 120px, 400px" src="images/firefox_addons_400px.jpg" alt="The Mozilla logo made up of puzzle pieces">
         </a>
         <a href="https://developer.mozilla.org/en-US/">
           <img src="images/mdn.svg" alt="An image of the MDN dinosaur logo">
@@ -138,7 +138,10 @@ Description: A webpage that contains images and an embeded video
       </div>
 
       <div class="red-panda">
-        <img src="images/red-panda.png" alt="An image of a red panda in a tree">
+        <picture>
+          <source srcset="images/red_panda_600px_portrait.png" media="(max-width: 600px)">
+          <img src="images/red_panda_1200px.png" alt="A red panda in a tree">
+      </picture>
       </div>
 
     </main>
