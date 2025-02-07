@@ -3,3 +3,13 @@ html {
   }
   
   /* Your CSS below here */  
+div {
+    width: 200px;
+    height: 150px;
+    margin: auto;
+    text-align: center;
+    align-content: center;
+    /*Calculated rem with trial and error*/
+    font-size: 1.1rem;
+    background-color: lightskyblue;
+}
