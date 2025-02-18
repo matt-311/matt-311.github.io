@@ -43,3 +43,23 @@ header, footer {
 }
 
 /* WRITE YOUR CODE BELOW HERE */
+
+@font-face {
+  font-family: 'ArvoRegular';
+  src: url('fonts/ArvoRegular.eot');
+  src: url('fonts/ArvoRegular.eot') format('embedded-opentype'),
+       url('fonts/ArvoRegular.woff2') format('woff2'),
+       url('fonts/ArvoRegular.woff') format('woff'),
+       url('fonts/ArvoRegular.ttf') format('truetype'),
+       url('fonts/ArvoRegular.svg#ArvoRegular') format('svg');
+}
+
+@font-face {
+  font-family: 'UrbanistRegular';
+  src: url('fonts/UrbanistRegular.eot');
+  src: url('fonts/UrbanistRegular.eot') format('embedded-opentype'),
+       url('fonts/UrbanistRegular.woff2') format('woff2'),
+       url('fonts/UrbanistRegular.woff') format('woff'),
+       url('fonts/UrbanistRegular.ttf') format('truetype'),
+       url('fonts/UrbanistRegular.svg#UrbanistRegular') format('svg');
+}
