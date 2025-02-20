@@ -94,16 +94,20 @@ p, li {
   line-height: 1.2;
 }
 
+section h2 + p {
+  text-indent: 20px;
+}
+
 /* Navigation Bar */
 
 nav li {
   margin-bottom: 2rem;
-  list-style-type: none;
 }
 
-nav ul {
+nav ul, ol {
   margin-top: 0.8rem;
   padding-left: 0rem;
+  list-style-type: none;
 }
 
 nav li a {
@@ -126,4 +130,27 @@ nav li a:active {
   background: rgb(101, 62, 62);
 }
 
-/* */
+/* Links */
+
+a {
+  outline: none;
+  color: #a66;
+}
+
+a:active {
+ color: rgb(101, 62, 62); 
+}
+
+a:hover, a:hover {
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(80, 53, 53); 
+}
+
+a[href*="http"] {
+  background: url(assets/external-link-52.png) 100% no-repeat;
+  background-size: 8px 8px;
+  padding-right: 11px;
+}
