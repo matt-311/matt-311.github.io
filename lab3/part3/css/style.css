@@ -44,6 +44,8 @@ header, footer {
 
 /* WRITE YOUR CODE BELOW HERE */
 
+/* Fonts */
+
 @font-face {
   font-family: 'ArvoRegular';
   src: url('fonts/ArvoRegular.eot');
@@ -63,6 +65,8 @@ header, footer {
        url('fonts/UrbanistRegular.ttf') format('truetype'),
        url('fonts/UrbanistRegular.svg#UrbanistRegular') format('svg');
 }
+
+/* Text */
 
 html {
   font-family: ArvoRegular;
@@ -89,3 +93,37 @@ p, li {
   font-size: 1.2rem;
   line-height: 1.2;
 }
+
+/* Navigation Bar */
+
+nav li {
+  margin-bottom: 2rem;
+  list-style-type: none;
+}
+
+nav ul {
+  margin-top: 0.8rem;
+  padding-left: 0rem;
+}
+
+nav li a {
+  display: inline-block;
+  width: 25rem;
+  line-height: 2.2;
+  text-align: center;
+  font-size: 2.5rem;
+  border: 3px solid #a66;
+  color: #a66;
+}
+
+nav li a:focus, nav li a:hover {
+  color: white;
+  background: #a66;
+}
+
+nav li a:active {
+  color: white;
+  background: rgb(101, 62, 62);
+}
+
+/* */
