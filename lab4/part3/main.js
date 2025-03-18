@@ -1,3 +1,10 @@
+/*
+Name: Matthew Pearce
+Filename: index.html
+Date: Mar 18, 2025
+Description: A webpage that contains bouncing balls (using JavaScript!)
+*/
+
 // setup canvas
 
 const canvas = document.querySelector("canvas");
