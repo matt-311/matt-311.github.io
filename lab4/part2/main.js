@@ -1,3 +1,10 @@
+/*
+Name: Matthew Pearce
+Filename: index.html
+Date: Mar 18, 2025
+Description: A webpage that contains images and JavaScript
+*/
+
 const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
 
