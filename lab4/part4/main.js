@@ -7,6 +7,9 @@ Description: A webpage that contains bouncing balls (using JavaScript!) with an 
 
 // setup canvas
 
+const para = document.querySelector('p');
+let count = 0;
+
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -40,7 +43,7 @@ class Shape {
 
 class Ball extends Shape{
   constructor(x, y, velX, velY, colour, size) {
-    super(x, y, velX, velY)
+    super(x, y, velX, velY);
     this.colour = colour;
     this.size = size;
     this.exists = true;
@@ -55,23 +58,23 @@ class Ball extends Shape{
   // Updating ball data
   update() {
     if ((this.x + this.size) >=width) {
-      this.velX = -(this.velX)
+      this.velX = -(this.velX);
     }
     if ((this.x - this.size) <=0) {
-      this.velX = -(this.velX)
+      this.velX = -(this.velX);
     }
     if ((this.y + this.size) >=height) {
-      this.velY = -(this.velY)
+      this.velY = -(this.velY);
     }
     if ((this.y - this.size) <=0) {
-      this.velY = -(this.velY)
+      this.velY = -(this.velY);
     }
     this.x += this.velX;
     this.y += this.velY;
   }
   collisionDetect() {
     for (const ball of balls) {
-      if (!(this !== ball) && ball.exists) {
+      if ((this !== ball) && ball.exists) {
         const dx = this.x - ball.x;
         const dy = this.y - ball.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
@@ -84,7 +87,7 @@ class Ball extends Shape{
 }
 
 // Create the Evil Circle class
-class EvilCircle extends shape {
+class EvilCircle extends Shape {
   constructor(x, y) {
     super(x, y, 20, 20);
     this.colour = "white";
@@ -109,23 +112,23 @@ class EvilCircle extends shape {
   // The draw mathod
   draw() {
     ctx.beginPath();
-    ctx.lineWidth = 3
+    ctx.lineWidth = 3;
     ctx.strokeStyle = this.colour;
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.stroke();
   }
   checkBounds() {
     if ((this.x + this.size) >=width) {
-      this.x = -(this.size)
+      this.x -= (this.size);
     }
     if ((this.x - this.size) <=0) {
-      this.x = -(this.size)
+      this.x += (this.size);
     }
     if ((this.y + this.size) >=height) {
-      this.y = -(this.size)
+      this.y -= (this.size);
     }
     if ((this.y - this.size) <=0) {
-      this.y = -(this.size)
+      this.y += (this.size);
     }
   }
   collisionDetect() {
@@ -136,6 +139,8 @@ class EvilCircle extends shape {
         const distance = Math.sqrt(dx * dx + dy * dy);
         if (distance < this.size + ball.size) {
           ball.exists = false;
+          count = count - 1;
+          para.textContent = 'Ball count: ' + count;
         }
       }
     }
@@ -143,7 +148,7 @@ class EvilCircle extends shape {
 }
 
 // Animating the ball
-const balls = []
+const balls = [];
 
 while (balls.length < 25) {
   const size = random(10, 20);
@@ -156,6 +161,8 @@ while (balls.length < 25) {
     size,
   );
   balls.push(ball);
+  count = count + 1;
+  para.textContent = 'Ball count: ' + count;
 }
 
 const evilCircle = new EvilCircle(random(0, width), random(0, height));
@@ -171,7 +178,7 @@ function loop() {
     }
   }
   evilCircle.draw();
-  evilCircle.update();
+  evilCircle.checkBounds();
   evilCircle.collisionDetect();
   requestAnimationFrame(loop);
 }
