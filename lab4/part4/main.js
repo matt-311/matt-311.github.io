@@ -106,6 +106,15 @@ class EvilCircle extends shape {
       }
     });
   }
+  // The draw mathod
+  draw() {
+    ctx.beginPath();
+    ctx.lineWidth = 3
+    ctx.strokeStyle = this.colour;
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.stroke();
+  }
+
 }
 
 // Animating the ball
