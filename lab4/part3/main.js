@@ -36,4 +36,11 @@ class Ball {
     this.colour = colour;
     this.size = size;
   }
+  // Ball drawing method
+  draw() {
+    ctx.beginPath();
+    ctx.fillStyle = this.colour;
+    ctx.arc(this.x, this.y, 0, 2 * Math.PI);
+    ctx.fill();
+  }  
 }
