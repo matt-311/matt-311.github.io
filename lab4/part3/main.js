@@ -40,7 +40,7 @@ class Ball {
   draw() {
     ctx.beginPath();
     ctx.fillStyle = this.colour;
-    ctx.arc(this.x, this.y, 0, 2 * Math.PI);
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.fill();
   }
   // Updating ball data
